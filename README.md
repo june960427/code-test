@@ -10,7 +10,7 @@
 # 2일차
 
 <ul>
-<li>간단한 조건문은 삼항 연산자 사용 인</li>
+<li>간단한 조건문은 삼항 연산자 사용 인지</li>
 <li>num % n ? 0 : 1; 와 같이 0과 1을 사용할 때는 boolean 활용</li>
 <li>논리 연산자 리마인드 [ false = 0, true = 1, || 하나라도 0이 아니면 true, !(i) 연산 결과 뒤집기,  + 플러스 연산자 = 피연산자를 숫자로 변형 => Number(bool)도 가 ]</li>
 <li>Array(i).fill() [Array(i) 길이가 i인 빈 배열 발생, fill() 빈 배열을 undefined로 채움]</li>
