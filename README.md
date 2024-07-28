@@ -1,6 +1,6 @@
-    # 1일차
-    
-    <ol>
+ # 1일차
+
+<ol>
       <li>스프레드 문법 [...arr] => arr.split("")</li>
       <li>str.repeat(i) => string 반복 시 사용가능</li>
       <li>
@@ -13,9 +13,9 @@
       </li>
     </ol>
 
-    # 2일차
+# 2일차
 
-    <ol>
+<ol>
       <li>간단한 조건문은 삼항 연산자 사용 인지</li>
       <li>num % n ? 0 : 1; 와 같이 0과 1을 사용할 때는 boolean 활용</li>
       <li>
@@ -44,9 +44,9 @@
       <li>arr['str'] 대괄호 표기볍</li>
     </ol>
 
-    # 3일차
+ # 3일차
 
-    <ol>
+<ol>
       <li>
         <ul>
           <li>str.match(/p/ig)</li>
