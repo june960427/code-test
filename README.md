@@ -1,6 +1,6 @@
- # 1일차
+   # 1일차
 
-<ol>
+   <ol>
       <li>스프레드 문법 [...arr] => arr.split("")</li>
       <li>str.repeat(i) => string 반복 시 사용가능</li>
       <li>
@@ -13,9 +13,9 @@
       </li>
     </ol>
 
-# 2일차
+   # 2일차
 
-<ol>
+   <ol>
       <li>간단한 조건문은 삼항 연산자 사용 인지</li>
       <li>num % n ? 0 : 1; 와 같이 0과 1을 사용할 때는 boolean 활용</li>
       <li>
@@ -44,9 +44,9 @@
       <li>arr['str'] 대괄호 표기볍</li>
     </ol>
 
- # 3일차
+   # 3일차
 
-<ol>
+   <ol>
       <li>
         <ul>
           <li>str.match(/p/ig)</li>
@@ -79,4 +79,54 @@
         sort();의 경우 요소를 문자열로 변환 후 유니코드 코드 포인트 순서로 정렬
         => 변수 a,b가 숫자를 비교할 때 콜백 함수 작성 필요
       </li>
+    </ol>
+    # 3일차
+
+   <ol>
+      <li>
+        <ul>
+          <li>str.match(/p/ig)</li>
+          <li>match() 모든 조건에 맞는 것을 찾아 배열로 전환</li>
+          <li>/p/ p를 찾는 정규 표현식</li>
+          <li>i 대소문자 구분X</li>
+          <li>g 전역 검색을 수</li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+          <li>
+            String()으 안전하고 범용적, 타입을 모르거나 null/undefined일 수 있는
+            경우에 유용
+          </li>
+          <li>String(null || undefined); "null" "undefined"/</li>
+          <li>
+            toString()은 객체의 매서드, 객체에서 커스텀 문자열 표현을 정의할 때
+            유용
+          </li>
+          <li>null || undefined .toString(); TypeError</li>
+        </ul>
+      </li>
+      <li>reverse(); 메소드 어레이의 순서를 뒤바꿈</li>
+      <li>sort()를 사용 후 reverse();로 연계하는 경우도 인지</li>
+      <li>map(NUmber)와 같은 형태도 인지</li>
+      <li>return할 때 true:false 조건 딱히 안적어도 되는 경우도 확인</li>
+      <li>Math 메소드의 활용 방안에 대해 생각</li>
+      <li>
+        sort();의 경우 요소를 문자열로 변환 후 유니코드 코드 포인트 순서로 정렬
+        => 변수 a,b가 숫자를 비교할 때 콜백 함수 작성 필요
+      </li>
+    </ol>
+
+
+ # 4일차
+
+   <ol>
+      <li>while문 활용 : ++ 증감 연산</li>
+      <li>indexOf(), findIndex() 메소드 리마인드</li>
+      <li>absolutes.reduce((acc, val, i) => acc + val * (signs[i] ? 1 : -1), 0); reduce()메소드의 활용법에 대해 생각해보기</li>
+      <li>includes(); 메소드 리마인드 find();의 경우 첫번째 true 값만 반환</li></li>
+      <li>arr.filter((v) => v % divisor == 0); 와 같이 새로운 배열이 필요한 경우 여러 메소드에 대해 다시 한 번 생각해보</li>
+      <li>repeat() 메소드 리마인드, slice() 리마인드 : slice(-4)의 경우 뒤에서 4번째에서 끝까지를 의미</li>
+      <li>isNaN()메소드 : NaN => true 반환</li>
+      <li>Sort((a,b)=>{ if (a > b) return -1; if (b > a) return 1; return 0;})메소드 : 음수 반환 시 a를 앞으로, 양수 반환 시 b를 앞으로, 0반환 시 순서 유지</li>
     </ol>
