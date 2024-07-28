@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
     # 1일차
 
     <ol>
@@ -88,5 +80,3 @@
         => 변수 a,b가 숫자를 비교할 때 콜백 함수 작성 필요
       </li>
     </ol>
-  </body>
-</html>
