@@ -1,5 +1,5 @@
     # 1일차
-
+    
     <ol>
       <li>스프레드 문법 [...arr] => arr.split("")</li>
       <li>str.repeat(i) => string 반복 시 사용가능</li>
