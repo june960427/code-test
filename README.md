@@ -1,15 +1,15 @@
 # 1일차
 
-<ul>
+<ol>
 <li>스프레드 문법 [...arr] => arr.split("")</li>
 <li>str.repeat(i) => string 반복 시 사용가능 </li>
 <li>Math.max(Number(`${a}${b}`), Number(`${b}${a}`)); => 백틱 활용법에 대해 넓게 생각해보기</li>
 <li>let num1 = parseInt(a + "" + b); => 스트링 변환 시 해당 방법도 고려해보기</li>
-</ul>
+</ol>
 
 # 2일차
 
-<ul>
+<ol>
 <li>간단한 조건문은 삼항 연산자 사용 인지</li>
 <li>num % n ? 0 : 1; 와 같이 0과 1을 사용할 때는 boolean 활용</li>
 <li>논리 연산자 리마인드 [ false = 0, true = 1, || 하나라도 0이 아니면 true, !(i) 연산 결과 뒤집기,  + 플러스 연산자 = 피연산자를 숫자로 변형 => Number(bool)도 가 ]</li>
@@ -25,11 +25,11 @@
   </ul>
 </li>
 <li>arr['str'] 대괄호 표기볍</li>
-</ul>
+</0l>
 
 # 3일차
 
-<ul>
+<ol>
 <li>
   <ul>
     <li>str.match(/p/ig)</li>
@@ -53,4 +53,4 @@
 <li>return할 때 true:false 조건 딱히 안적어도 되는 경우도 확인</li>
 <li>Math 메소드의 활용 방안에 대해 생각</li>
 <li>sort();의 경우 요소를 문자열로 변환 후 유니코드 코드 포인트 순서로 정렬 => 변수 a,b가 숫자를 비교할 때 콜백 함수 작성 필요</li>
-</ul>
+</ol>
