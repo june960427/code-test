@@ -31,11 +31,13 @@ function solution(s) {
 function solution(n) {
   let stack = [];
   while (n > 0) {
-    stack.unshift(n % 2);
+    stack.push(n % 2);
     n = Math.trunc(n / 2);
   }
-  return stack.join("");
+  return stack.reverse().join("");
 }
+
+console.log(solution(10));
 
 // 저자 풀이
 
@@ -167,3 +169,117 @@ const solution = (board, moves) => {
 
   return result;
 };
+
+function solution(s) {
+  let str = [...s];
+  let def = { "]": "[", "}": "{", ")": "(" };
+  let stack = [];
+  let count = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    for (let j = 0; j < str.length; j++) {
+      if (str[j] === "(" || str[j] === "[" || str[j] === "{") {
+        stack.push(str[j]);
+      } else if (stack.length > 0 && stack[stack.length - 1] == def[str[j]]) {
+        stack.pop();
+      } else {
+        stack.push(str[j]);
+        break;
+      }
+    }
+    stack.length === 0 ? (count += 1) : null;
+    str.push(str.shift());
+    stack = [];
+  }
+  return count;
+}
+
+function solution(n, k, cmd) {
+  let arr = Array(n)
+    .fill(0)
+    .map((v, i) => v + i);
+  let stack = [];
+  let curr = k;
+
+  for (let c of cmd) {
+    if (c.includes("D")) {
+      curr += parseInt(c.split(" ")[1]);
+    }
+    if (c.includes("U")) {
+      curr -= parseInt(c.split(" ")[1]);
+    }
+    if (c == "C") {
+      stack.push(arr[curr]);
+      arr.splice(curr, 1);
+    }
+    if (c == "Z") {
+      arr.push(stack.pop());
+      arr.sort((a, b) => a - b);
+    }
+  }
+  let result = arr.map((v) => [v, "O"]);
+  for (let i = 0; i < stack.length; i++) {
+    result.push([stack[i], "X"]);
+  }
+
+  return result
+    .sort((a, b) => a[0] - b[0])
+    .map((v) => v[1])
+    .join("");
+}
+
+function solution(n, k, cmd) {
+  let deleted = [];
+  let current = k;
+  let table = {
+    up: Array(n)
+      .fill()
+      .map((_, i) => i - 1),
+    down: Array(n)
+      .fill()
+      .map((_, i) => i + 1),
+  };
+  table.up[0] = null;
+  table.down[n - 1] = null;
+
+  for (const command of cmd) {
+    if (command.startsWith("U")) {
+      const x = parseInt(command.split(" ")[1]);
+      for (let i = 0; i < x; i++) {
+        current = table.up[current];
+      }
+    } else if (command.startsWith("D")) {
+      const x = parseInt(command.split(" ")[1]);
+      for (let i = 0; i < x; i++) {
+        current = table.down[current];
+      }
+    } else if (command === "C") {
+      deleted.push([current, table.up[current], table.down[current]]);
+      if (table.up[current] !== null) {
+        table.down[table.up[current]] = table.down[current];
+      }
+      if (table.down[current] !== null) {
+        table.up[table.down[current]] = table.up[current];
+      }
+      current =
+        table.down[current] !== null ? table.down[current] : table.up[current];
+    } else if (command === "Z") {
+      const [restored, up, down] = deleted.pop();
+      if (up !== null) {
+        table.down[up] = restored;
+      }
+      if (down !== null) {
+        table.up[down] = restored;
+      }
+      table.up[restored] = up;
+      table.down[restored] = down;
+    }
+  }
+
+  const result = Array(n).fill("O");
+  deleted.forEach(([idx]) => {
+    result[idx] = "X";
+  });
+
+  return result.join("");
+}
